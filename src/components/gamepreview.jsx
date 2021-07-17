@@ -14,6 +14,7 @@ const useStyles = makeStyles({
   root: {
     width: 550,
     margin: 15,
+    borderRadius: 40,
   },
   media: {
     height: 300,
