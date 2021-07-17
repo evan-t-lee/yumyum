@@ -1,9 +1,10 @@
-var admin = require("firebase-admin");
+var mongo = require('mongodb');
 
-var serviceAccount = require("./serviceAccountKey.json");
+var mongoClient = require('mongodb').MongoClient; 
+var url = "mongodb://localhost:3000/mydb";
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-
-const db = admin.firestore(); 
+mongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  console.log("Created new database"); 
+  db.close(); 
+})
