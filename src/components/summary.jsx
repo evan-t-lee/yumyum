@@ -116,7 +116,7 @@ const Summary = ({ stats }) => {
 
         <Paper className={classes.achievement} elevation={1} title>
           <Typography variant="body1" color="textSecondary" component="p">
-            {stats.connect && <b>Connect</b>}
+            {stats.connect && <b>Connect the Dots</b>}
           </Typography>
           <Typography variant="body3" color="textSecondary" component="p">
             {stats.connect && <p>{stats.connect.hours} hours</p>}
