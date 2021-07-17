@@ -6,6 +6,7 @@ import {
   Switch,
 } from "react-router-dom";
 
+import Login from "./components/login"
 import Main from "./components/main";
 import Home from "./components/home";
 import Profile from "./components/profile";
@@ -17,13 +18,16 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/games/sudoku">
+        <Route path ="/login">
+          <Login />
+        </Route>
+        <Route path="/home/sudoku">
           <Sudoku />
         </Route>
-        <Route path="/games/crosswords">
+        <Route path="/home/crosswords">
           <Crosswords />
         </Route>
-        <Route path="/games">
+        <Route path="/home">
           <Home />
         </Route>
         <Route path="/profile">
