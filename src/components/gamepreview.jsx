@@ -36,28 +36,31 @@ export default function GamePreview({ game }) {
 
   return (
     <Card className={classes.root}>
-      <Link to={`/games/${game.title.toLowerCase()}`} className={classes.link} >
+      <Link to={`/games/${game.title.toLowerCase()}`} className={classes.link}>
         <CardActionArea>
-            <CardMedia
+          <CardMedia
             className={classes.media}
             image={game.image}
             title={game.title}
-            />
-            <CardContent>
+          />
+          <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-                {game.title}
+              {game.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-                {game.desc}
+              {game.desc}
             </Typography>
-            </CardContent>
+          </CardContent>
         </CardActionArea>
       </Link>
       <CardActions className={classes.buttons}>
         <Button size="large" color="primary">
           <FavoriteBorderIcon />
         </Button>
-        <Link to={`/games/${game.title.toLowerCase()}`} className={classes.link} >
+        <Link
+          to={`/games/${game.title.toLowerCase()}`}
+          className={classes.link}
+        >
           <Button size="large" variant="contained" color="primary">
             Play
           </Button>
