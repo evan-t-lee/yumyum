@@ -8,6 +8,7 @@ import {
 
 import Main from "./components/main";
 import Home from "./components/home";
+import Profile from "./components/profile";
 import Crosswords from "./components/crosswords";
 import Sudoku from "./components/sudoku";
 
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/games">
           <Home />
+        </Route>
+        <Route path="/profile">
+          <Profile />
         </Route>
         <Route path="/">
           <Main />
