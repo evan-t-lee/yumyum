@@ -22,6 +22,7 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import CallIcon from '@material-ui/icons/Call';
 import CrosswordCell from "./crosswordCell";
+import Grid from '@material-ui/core/Grid';
 
 const crossword = [
   [ '', '', 'B', '', '', '', '', '', '', '', '', '', '', '', 'T', '', 'S'],
@@ -115,7 +116,19 @@ const useStyles = makeStyles((theme) => ({
   },
   cell: {
     width: "58px",
-  }
+  },
+  hintTable: {
+    fontSize: "150%",
+    width: "100%",
+  },
+  hintHeading: {
+    textAlign: "center",
+    fontSize: "140%",
+    color: theme.palette.primary.main,
+    paddingTop: theme.spacing(10),
+    paddingBottom: theme.spacing(2),
+    textAlign: "left",
+  },
 }));
 
 export default function Crosswords() {
@@ -232,13 +245,71 @@ export default function Crosswords() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <table>
-          { crossword.length && crossword.map((row) => (
-            <tr>
-              <Row row={row}/>
-            </tr>
-          ))}
-        </table>
+        <Grid container spacing={3}>
+          <Grid item xs={7}>
+            <table>
+              { crossword.length && crossword.map((row) => (
+                <tr>
+                  <Row row={row}/>
+                </tr>
+              ))}
+            </table>
+          </Grid>
+          <Grid item xs={5}>
+            <table class={classes.hintTable}>
+              <tr>
+                <th class={classes.hintHeading} colspan="2">Across</th>
+              </tr>
+              <tr>
+                <td>5) Nut collector</td>
+                <td>6) Emu's cousin</td>
+              </tr>
+              <tr>
+                <td>7) Bullwinkle, for one</td>
+                <td>8) Centaur, in part</td>
+              </tr>
+              <tr>
+                <td>9) Aquarium favourite</td>
+                <td>10) Sea spouter</td>
+              </tr>
+              <tr>
+                <td>12) Banyard bird</td>
+                <td>16) Fox's prey</td>
+              </tr>
+              <tr>
+                <td>17) Furry swimmer</td>
+                <td>18) Bird with flippers</td>
+              </tr>
+              <tr>
+                <td>19) Aussie hopper</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th class={classes.hintHeading} colspan="2">Down</th>
+              </tr>
+              <tr>
+                <td>1) Monarch</td>
+                <td>2) Slowpoke</td>
+              </tr>
+              <tr>
+                <td>3) Lizard's relative</td>
+                <td>4) Quick change artist</td>
+              </tr>
+              <tr>
+                <td>5) Desert stinger</td>
+                <td>11) Everglades denizen</td>
+              </tr>
+              <tr>
+                <td>13) Household pet</td>
+                <td>14) Spotted stalker</td>
+              </tr>
+              <tr>
+                <td>15) Odor emitter</td>
+                <td></td>
+              </tr>
+            </table>
+          </Grid>
+        </Grid>
       </main>
     </div>
   );
