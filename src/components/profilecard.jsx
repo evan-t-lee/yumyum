@@ -28,6 +28,7 @@ import BookIcon from '@material-ui/icons/Book';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CallIcon from '@material-ui/icons/Call';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 
 const drawerWidth = 240;
 
@@ -140,7 +141,7 @@ const ProfileCardComp = ({ profile }) => {
                 <b className={classes.whatever}>{profile.name}</b> {`${profile.age}, ${profile.role}`}
               </Typography>
             </div>
-            <Button className={classes.button} variant="contained" color="primary">
+            <Button className={classes.button} variant="contained" color="primary" disabled>
               Add Friend
             </Button>
           </div>
@@ -217,9 +218,15 @@ export default function ProfileCard({ profile }) {
         </div>
         <Divider />
         <List>
+          <Link className={classes.link} to="/home">
+            <ListItem button key="Home">
+              <ListItemIcon><HomeRoundedIcon /></ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItem>
+          </Link>
           <Link className={classes.link} to="/profile">
             <ListItem button key="Profile">
-              <ListItemIcon><AccountCircleIcon /></ListItemIcon>
+              <ListItemIcon><AccountCircleIcon color="primary" /></ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItem>
           </Link>

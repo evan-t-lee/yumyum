@@ -22,6 +22,7 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import CallIcon from '@material-ui/icons/Call';
 import CrosswordCell from "./crosswordCell";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 const crossword = [
   [ '', '', 'B', '', '', '', '', '', '', '', '', '', '', '', 'T', '', 'S'],
@@ -226,6 +227,15 @@ export default function Crosswords() {
             <ListItem button key="Video Call">
               <ListItemIcon><CallIcon /></ListItemIcon>
               <ListItemText primary="Video Call" />
+            </ListItem>
+          </Link>
+        </List>
+        <Divider />
+        <List>
+          <Link className={classes.link} to="/login">
+            <ListItem button key="Exit">
+              <ListItemIcon><ExitToAppIcon /></ListItemIcon>
+              <ListItemText primary="Sign Out" />
             </ListItem>
           </Link>
         </List>
