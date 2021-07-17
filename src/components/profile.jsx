@@ -6,6 +6,8 @@ const profiles = [
   {
     name: "Rushil Dave",
     image: Rushil,
+    role: "Senior Mentor",
+    age: "72",
   },
 ];
 

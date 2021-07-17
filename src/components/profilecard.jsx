@@ -35,6 +35,9 @@ export default function ProfileCard({ profile }) {
           <Typography gutterBottom variant="h5" component="h2">
             {profile.name}
           </Typography>
+          <Typography variant="body1" color="textSecondary" component="p">
+            {`${profile.age}, ${profile.role}`}
+          </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {profile.bio}
           </Typography>
