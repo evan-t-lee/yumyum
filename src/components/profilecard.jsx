@@ -2,7 +2,6 @@ import React from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Summary from "./summary";
@@ -28,6 +27,8 @@ import BookIcon from '@material-ui/icons/Book';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CallIcon from '@material-ui/icons/Call';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+import MonoLogo from "../assets/monologo.png";
 
 const drawerWidth = 240;
 
@@ -140,7 +141,7 @@ const ProfileCardComp = ({ profile }) => {
                 <b className={classes.whatever}>{profile.name}</b> {`${profile.age}, ${profile.role}`}
               </Typography>
             </div>
-            <Button className={classes.button} variant="contained" color="primary">
+            <Button className={classes.button} variant="contained" color="primary" disabled>
               Add Friend
             </Button>
           </div>
@@ -188,9 +189,7 @@ export default function ProfileCard({ profile }) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Home
-          </Typography>
+          <img style={{width: "120px"}} src={MonoLogo} alt="logo" />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -217,9 +216,15 @@ export default function ProfileCard({ profile }) {
         </div>
         <Divider />
         <List>
+          <Link className={classes.link} to="/home">
+            <ListItem button key="Home">
+              <ListItemIcon><HomeRoundedIcon /></ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItem>
+          </Link>
           <Link className={classes.link} to="/profile">
             <ListItem button key="Profile">
-              <ListItemIcon><AccountCircleIcon /></ListItemIcon>
+              <ListItemIcon><AccountCircleIcon color="primary" /></ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItem>
           </Link>

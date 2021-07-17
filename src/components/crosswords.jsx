@@ -6,6 +6,7 @@ import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
+import Grid from '@material-ui/core/Grid';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
@@ -22,7 +23,8 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import CallIcon from '@material-ui/icons/Call';
 import CrosswordCell from "./crosswordCell";
-import Grid from '@material-ui/core/Grid';
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import MonoLogo from "../assets/monologo.png";
 
 const crossword = [
   [ '', '', 'B', '', '', '', '', '', '', '', '', '', '', '', 'T', '', 'S'],
@@ -186,9 +188,7 @@ export default function Crosswords() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Crossword
-          </Typography>
+          <img style={{width: "120px"}} src={MonoLogo} alt="logo" />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -239,6 +239,15 @@ export default function Crosswords() {
             <ListItem button key="Video Call">
               <ListItemIcon><CallIcon /></ListItemIcon>
               <ListItemText primary="Video Call" />
+            </ListItem>
+          </Link>
+        </List>
+        <Divider />
+        <List>
+          <Link className={classes.link} to="/login">
+            <ListItem button key="Exit">
+              <ListItemIcon><ExitToAppIcon /></ListItemIcon>
+              <ListItemText primary="Sign Out" />
             </ListItem>
           </Link>
         </List>
