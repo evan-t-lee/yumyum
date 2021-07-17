@@ -28,6 +28,7 @@ import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CallIcon from '@material-ui/icons/Call';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+import MonoLogo from "../assets/monologo.png";
 
 const drawerWidth = 240;
 
@@ -188,9 +189,7 @@ export default function ProfileCard({ profile }) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Home
-          </Typography>
+          <img style={{width: "120px"}} src={MonoLogo} alt="logo" />
         </Toolbar>
       </AppBar>
       <Drawer

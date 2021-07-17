@@ -23,6 +23,7 @@ import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import CallIcon from '@material-ui/icons/Call';
 import CrosswordCell from "./crosswordCell";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import MonoLogo from "../assets/monologo.png";
 
 const crossword = [
   [ '', '', 'B', '', '', '', '', '', '', '', '', '', '', '', 'T', '', 'S'],
@@ -174,9 +175,7 @@ export default function Crosswords() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Crossword
-          </Typography>
+          <img style={{width: "120px"}} src={MonoLogo} alt="logo" />
         </Toolbar>
       </AppBar>
       <Drawer

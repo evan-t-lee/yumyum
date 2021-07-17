@@ -23,6 +23,7 @@ import CallIcon from '@material-ui/icons/Call';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import GamesList from "./gameslist";
+import MonoLogo from "../assets/monologo.png";
 
 const drawerWidth = 240;
 
@@ -129,9 +130,7 @@ export default function Home() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Home
-          </Typography>
+          <img style={{width: "120px"}} src={MonoLogo} alt="logo" />
         </Toolbar>
       </AppBar>
       <Drawer
