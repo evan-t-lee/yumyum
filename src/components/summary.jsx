@@ -28,11 +28,14 @@ const MinesweeperIcon = () => {
 
 const Summary = ({ stats }) => {
   return (
-    <Paper variant="outlined">
+    <Paper variant="outlined" title>
       <Typography variant="body1" color="textSecondary" component="p">
-        {stats.minesweeper && <p>{stats.minesweeper.hours} hours</p>}
-        {stats.minesweeper && <MinesweeperIcon /> }
+        {stats.minesweeper && <b>Minesweeper</b>}
       </Typography>
+      <Typography variant="body3" color="textSecondary" component="p">
+        {stats.minesweeper && <p>{stats.minesweeper.hours} hours</p>}
+      </Typography>
+        {stats.minesweeper && <MinesweeperIcon /> }
     </Paper>
   );
 };

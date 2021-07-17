@@ -20,6 +20,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import BookIcon from '@material-ui/icons/Book';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CallIcon from '@material-ui/icons/Call';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import GamesList from "./gameslist";
 
 const drawerWidth = 240;
@@ -174,6 +175,15 @@ export default function Home() {
             <ListItem button key="Video Call">
               <ListItemIcon><CallIcon /></ListItemIcon>
               <ListItemText primary="Video Call" />
+            </ListItem>
+          </Link>
+        </List>
+        <Divider />
+        <List>
+          <Link className={classes.link} to="/login">
+            <ListItem button key="Exit">
+              <ListItemIcon><ExitToAppIcon /></ListItemIcon>
+              <ListItemText primary="Sign Out" />
             </ListItem>
           </Link>
         </List>

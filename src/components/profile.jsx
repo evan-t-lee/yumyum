@@ -57,12 +57,7 @@ const profiles = [
 const Profile = () => {
   const p = profiles[0];
 
-  return (
-    <div>
-      <ProfileCard profile={p} />
-      <Summary stats={p.stats} />
-    </div>
-  );
+  return <ProfileCard profile={p} />;
 };
 
 export default Profile;

@@ -7,6 +7,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Summary from "./summary";
 
 const useStyles = makeStyles({
   root: {
@@ -37,6 +38,7 @@ export default function ProfileCard({ profile }) {
             {profile.bio}
           </Typography>
         </CardContent>
+        <Summary stats={profile.stats} />
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
