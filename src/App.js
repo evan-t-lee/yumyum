@@ -36,7 +36,7 @@ function App() {
           <VideoChat />
         </Route>
         <Route path="/">
-          <Main />
+          <Login />
         </Route>
       </Switch>
     </Router>
