@@ -9,6 +9,8 @@ const server = http.createServer(function (req, res) {
     if (err) throw err;
 }); 
 
+app.get("/", (req, res) => res.status(200).send("YELLO")); 
+
 const PORT = process.env.PORT || 3000; 
 
 server.listen(PORT, function(){ 
