@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -87,6 +88,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
   },
+  link: {
+    textDecoration: "none",
+  }
 }));
 
 export default function Home() {
@@ -152,10 +156,12 @@ export default function Home() {
         </div>
         <Divider />
         <List>
-          <ListItem button key="Profile">
-            <ListItemIcon><AccountCircleIcon /></ListItemIcon>
-            <ListItemText primary="Profile" />
-          </ListItem>
+          <Link className={classes.link} to="/profile">
+            <ListItem button key="Profile">
+              <ListItemIcon><AccountCircleIcon /></ListItemIcon>
+              <ListItemText primary="Profile" />
+            </ListItem>
+          </Link>
           <ListItem button key="Summary">
             <ListItemIcon><BookIcon /></ListItemIcon>
             <ListItemText primary="Summary" />
