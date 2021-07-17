@@ -9,36 +9,58 @@ const profiles = [
     image: Rushil,
     role: "Senior Mentor",
     age: "72",
-    stats: [],
+    stats: {
+      minesweeper: {
+        hours: "19",
+        achievement: true,
+      },
+      sudoku: {
+        hours: "12",
+        achievement: true,
+      },
+    },
   },
   {
     name: "Gertrude Murray",
     image: "",
     role: "Senior Mentor",
     age: "82",
-    stats: [],
+    stats: {
+      minesweeper: {
+        hours: "23",
+        achievement: true,
+      },
+      sudoku: {
+        hours: "6",
+        achievement: false,
+      },
+    },
   },
   {
     name: "Alice Lobo",
     image: "",
     role: "Mentee",
     age: "8",
-    stats: [],
+    stats: {
+      minesweeper: {
+        hours: "3",
+        achievement: false,
+      },
+      sudoku: {
+        hours: "12",
+        achievement: true,
+      },
+    },
   },
 ];
 
 const Profile = () => {
+  const p = profiles[0];
+
   return (
     <div>
-      {profiles.length &&
-        profiles.map((p) => {
-          return (
-            <>
-              <ProfileCard profile={p} />
-              <Summary stats={p.stats} />
-            </>
-          );
-        })}
+      <ProfileCard profile={p} />
+      <Summary stats={p.stats} />
     </div>
   );
 };
