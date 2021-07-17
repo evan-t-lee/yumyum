@@ -8,6 +8,7 @@ const profiles = [
     name: "Rushil Dave",
     image: Rushil,
     role: "Senior Mentor",
+    bio: "Hi I’m Rushil, I am really excited to get to know you and learn together!.  A little bit about me: I love maths and English. When I'm not nose-deep in my books, I love going to brunches.  In my downtime I go on Maccas run and have cheeseburgers.",
     age: "72",
     stats: {
       minesweeper: {
@@ -15,6 +16,14 @@ const profiles = [
         achievement: true,
       },
       sudoku: {
+        hours: "12",
+        achievement: true,
+      },
+      colouring: {
+        hours: "10",
+        achievement: true,
+      },
+      connect: {
         hours: "12",
         achievement: true,
       },
@@ -34,6 +43,14 @@ const profiles = [
         hours: "6",
         achievement: false,
       },
+      colouring: {
+        hours: "10",
+        achievement: true,
+      },
+      connect: {
+        hours: "12",
+        achievement: true,
+      },
     },
   },
   {
@@ -50,6 +67,14 @@ const profiles = [
         hours: "12",
         achievement: true,
       },
+      colouring: {
+        hours: "7",
+        achievement: true,
+      },
+      connect: {
+        hours: "12",
+        achievement: true,
+      },
     },
   },
 ];
@@ -57,12 +82,7 @@ const profiles = [
 const Profile = () => {
   const p = profiles[0];
 
-  return (
-    <div>
-      <ProfileCard profile={p} />
-      <Summary stats={p.stats} />
-    </div>
-  );
+  return <ProfileCard profile={p} />;
 };
 
 export default Profile;
