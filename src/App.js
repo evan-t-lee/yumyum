@@ -5,8 +5,7 @@ import {
   Switch,
 } from "react-router-dom";
 
-import Login from "./components/login"
-import Main from "./components/main";
+import Login from "./components/login";
 import Home from "./components/home";
 import Profile from "./components/profile";
 import Crosswords from "./components/crosswords";

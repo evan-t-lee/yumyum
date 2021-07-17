@@ -1,7 +1,6 @@
 import React from "react";
 import ProfileCard from "./profilecard";
 import Rushil from "../assets/Untitled.png";
-import Summary from "./summary";
 
 const profiles = [
   {
