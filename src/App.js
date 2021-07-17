@@ -2,7 +2,6 @@ import "./App.css";
 import {
   BrowserRouter as Router,
   Route,
-  Redirect,
   Switch,
 } from "react-router-dom";
 
@@ -17,13 +16,13 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/games/sudoku">
+        <Route path="/home/sudoku">
           <Sudoku />
         </Route>
-        <Route path="/games/crosswords">
+        <Route path="/home/crosswords">
           <Crosswords />
         </Route>
-        <Route path="/games">
+        <Route path="/home">
           <Home />
         </Route>
         <Route path="/profile">
