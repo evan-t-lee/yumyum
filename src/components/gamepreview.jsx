@@ -36,7 +36,7 @@ export default function GamePreview({ game }) {
 
   return (
     <Card className={classes.root}>
-      <Link to={`/games/${game.title.toLowerCase()}`} className={classes.link} >
+      <Link to={`/home/${game.title.toLowerCase()}`} className={classes.link} >
         <CardActionArea>
             <CardMedia
             className={classes.media}
@@ -57,7 +57,7 @@ export default function GamePreview({ game }) {
         <Button size="large" color="primary">
           <FavoriteBorderIcon />
         </Button>
-        <Link to={`/games/${game.title.toLowerCase()}`} className={classes.link} >
+        <Link to={`/home/${game.title.toLowerCase()}`} className={classes.link} >
           <Button size="large" variant="contained" color="primary">
             Play
           </Button>

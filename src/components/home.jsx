@@ -20,6 +20,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import BookIcon from '@material-ui/icons/Book';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CallIcon from '@material-ui/icons/Call';
+import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import GamesList from "./gameslist";
 
 const drawerWidth = 240;
@@ -90,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
-  }
+  },
 }));
 
 export default function Home() {
@@ -156,6 +157,12 @@ export default function Home() {
         </div>
         <Divider />
         <List>
+         <Link className={classes.link} to="/home">
+            <ListItem button key="Home">
+              <ListItemIcon><HomeRoundedIcon color='primary'/></ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItem>
+          </Link>
           <Link className={classes.link} to="/profile">
             <ListItem button key="Profile">
               <ListItemIcon><AccountCircleIcon /></ListItemIcon>
