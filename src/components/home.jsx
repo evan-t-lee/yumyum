@@ -170,10 +170,12 @@ export default function Home() {
             <ListItemIcon><PeopleAltIcon /></ListItemIcon>
             <ListItemText primary="Meetup" />
           </ListItem>
-          <ListItem button key="Video Call">
-            <ListItemIcon><CallIcon /></ListItemIcon>
-            <ListItemText primary="Video Call" />
-          </ListItem>
+          <Link className={classes.link} to="/video">
+            <ListItem button key="Video Call">
+              <ListItemIcon><CallIcon /></ListItemIcon>
+              <ListItemText primary="Video Call" />
+            </ListItem>
+          </Link>
         </List>
       </Drawer>
       <main className={classes.content}>
