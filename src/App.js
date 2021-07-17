@@ -11,6 +11,7 @@ import Home from "./components/home";
 import Profile from "./components/profile";
 import Crosswords from "./components/crosswords";
 import Sudoku from "./components/sudoku";
+import VideoChat from "./components/videochat";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/profile">
           <Profile />
+        </Route>
+        <Route path="/video">
+          <VideoChat />
         </Route>
         <Route path="/">
           <Main />

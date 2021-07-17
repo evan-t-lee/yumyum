@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileCard from "./profilecard";
 import Rushil from "../assets/Untitled.png";
+import Summary from "./summary";
 
 const profiles = [
   {
@@ -8,6 +9,21 @@ const profiles = [
     image: Rushil,
     role: "Senior Mentor",
     age: "72",
+    stats: [],
+  },
+  {
+    name: "Gertrude Murray",
+    image: "",
+    role: "Senior Mentor",
+    age: "82",
+    stats: [],
+  },
+  {
+    name: "Alice Lobo",
+    image: "",
+    role: "Mentee",
+    age: "8",
+    stats: [],
   },
 ];
 
@@ -15,7 +31,14 @@ const Profile = () => {
   return (
     <div>
       {profiles.length &&
-        profiles.map((p) => <ProfileCard profile={p} />)}
+        profiles.map((p) => {
+          return (
+            <>
+              <ProfileCard profile={p} />
+              <Summary stats={p.stats} />
+            </>
+          );
+        })}
     </div>
   );
 };
