@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Avatar from "@material-ui/core/Avatar";
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -11,10 +12,12 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    padding: 50,
   },
-  image: {
-    borderRadius: 10,
-  },
+  avatar: {
+    width: 150,
+    height: 150,
+  }
 });
 
 export default function ProfileCard({ profile }) {
@@ -23,14 +26,7 @@ export default function ProfileCard({ profile }) {
   return (
     <Card className={classes.root} variant="outlined">
       <CardActionArea>
-        <CardMedia
-          component="img"
-          className={classes.image}
-          alt={profile.name}
-          height="140"
-          image={profile.image}
-          title={profile.name}
-        />
+        <Avatar className={classes.avatar} alt={profile.name} src={profile.image} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {profile.name}
