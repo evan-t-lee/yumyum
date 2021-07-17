@@ -7,17 +7,25 @@ import {
 } from "react-router-dom";
 
 import Main from "./components/main";
+import Home from "./components/home";
 import Crosswords from "./components/crosswords";
+import Sudoku from "./components/sudoku";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
-          <Main />
+        <Route path="/games">
+          <Home />
         </Route>
-        <Route path="/crosswords">
+        <Route path="/games/sudoku">
+          <Sudoku />
+        </Route>
+        <Route path="/games/crosswords">
           <Crosswords />
+        </Route>
+        <Route path="/">
+          <Home />
         </Route>
       </Switch>
     </Router>
