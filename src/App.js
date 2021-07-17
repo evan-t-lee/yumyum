@@ -15,17 +15,17 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/games">
-          <Home />
-        </Route>
         <Route path="/games/sudoku">
           <Sudoku />
         </Route>
         <Route path="/games/crosswords">
           <Crosswords />
         </Route>
-        <Route path="/">
+        <Route path="/games">
           <Home />
+        </Route>
+        <Route path="/">
+          <Main />
         </Route>
       </Switch>
     </Router>
