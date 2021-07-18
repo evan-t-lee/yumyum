@@ -12,7 +12,6 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { testTheme } from '../themes/theme.jsx';
 import Logo from "../assets/logo.png";
 import { useHistory } from 'react-router-dom';
 
@@ -49,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: testTheme.palette.primary.main,
+    backgroundColor: theme.palette.primary.main,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -57,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    backgroundColor: testTheme.palette.primary.main,
+    backgroundColor: theme.palette.primary.main,
     '&:hover': {
        backgroundColor: theme.palette.grey[800],
        color: 'white',
@@ -71,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
   },
   signup: {
-    color: testTheme.palette.primary.main,
+    color: theme.palette.primary.main,
   },
 }));
 
