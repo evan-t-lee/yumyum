@@ -69,7 +69,10 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     color: 'black',
-  }
+  },
+  signup: {
+    color: testTheme.palette.primary.main,
+  },
 }));
 
 export default function SignInSide() {
@@ -134,7 +137,7 @@ export default function SignInSide() {
               </Grid>
               <Grid item>
                 <Link href="#" className={classes.footer} variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  Don't have an account? <span className={classes.signup}>Sign Up</span>
                 </Link>
               </Grid>
             </Grid>
