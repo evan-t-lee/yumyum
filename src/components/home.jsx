@@ -24,7 +24,6 @@ import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import GamesList from "./gameslist";
 import MonoLogo from "../assets/monologo.png";
-import { testTheme } from '../themes/theme.jsx';
 
 const drawerWidth = 240;
 
